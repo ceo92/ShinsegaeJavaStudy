@@ -1,8 +1,8 @@
-package jungol.operator;
+package jungol.operator.self;
 
 import java.io.*;
 
-public class Q3 {
+public class Self3 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(br.readLine());

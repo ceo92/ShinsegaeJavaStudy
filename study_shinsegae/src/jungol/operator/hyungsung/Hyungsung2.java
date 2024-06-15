@@ -1,23 +1,21 @@
-package jungol.operator;
+package jungol.operator.hyungsung;
 
 import java.io.*;
+import java.util.StringTokenizer;
 
-public class Q7 {
+public class Hyungsung2 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] split = br.readLine().split(" ");
         int a = Integer.parseInt(split[0]);
         int b = Integer.parseInt(split[1]);
-        boolean x = (a != 0) ? true : false;
-        boolean y = (b != 0) ? true : false;
 
-        System.out.print((x && y) + " " +(x || y));
 
+        System.out.printf("%d / %d = %d...%d" , a,b,a/b,a%b);
 
 
 
 
 
     }
-
 }

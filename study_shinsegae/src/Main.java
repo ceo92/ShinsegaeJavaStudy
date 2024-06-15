@@ -1,35 +1,41 @@
-public class Main {
-    public static void main(String[] args) {
-        int v;
-        v=20;
+import java.io.*;
+import java.util.*;
 
-        System.out.println("v = " + v);
+public class Main{
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
 
-        //Q2
-        int a = 10;
-        int b = a;
-        int c = b * 10;
+        for (int i=0 ; i<n ; i++){ //1 2 3
+            for (int j = 0 ; j<i ; j++){ //0 1 2 //늘어나고 => 줄고 => 늘어나고    // 줄고 => 늘어나고 => 줄고
+                System.out.print(" ");
+            }
+            for (int j = i ; j<n*2-i-1 ; j++){ //5 3 1
+                System.out.print("*");
+            }
+            for (int j = 0 ; j<i ; j++){ //0 1 2
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
 
-        //Q3
-        int sum=1;
-        sum+=2;
-        sum+=3;
-        sum+=4;
-        sum+=5;
-
-        System.out.println("sum = " + sum);
-
-
-        //Q4
-        int x=10 , y=20;
-        System.out.printf("before swap : x = %s , y = %s\n" , x,y);
-        int temp;
-        temp = x;
-        x= y;
-        y = temp;
-        System.out.printf("after swap : x = %s , y = %s\n" , x,y);
-
+        //점점 커져 : 커지는 수에 곱하기 +
+        //점점 작아져 : 커지는 수에 곱하기
+        for (int i=1 ; i<n ; i++) { //1 2
+            for (int j = n - i - 1; j > 0; j--) { //1 0
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i * 2 + 1; j++) { //3입력 => 3 5 7 9
+                System.out.print("*");
+            }
+            for (int j = n - i - 1; j > 0; j--) { //1 0
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
 
 
     }
 }
+
+

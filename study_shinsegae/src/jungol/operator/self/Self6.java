@@ -1,8 +1,8 @@
-package jungol.operator;
+package jungol.operator.self;
 
 import java.io.*;
 
-public class Q5 {
+public class Self6 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] split = br.readLine().split(" ");
@@ -10,8 +10,11 @@ public class Q5 {
         int b = Integer.parseInt(split[1]);
 
 
-        System.out.println((a==b)? 1:0);
-        System.out.println((a!=b)? 1:0);
+        System.out.printf("%d > %d --- %b\n" , a,b,a>b);
+        System.out.printf("%d < %d --- %b\n" , a,b,a<b);
+        System.out.printf("%d >= %d --- %b\n",a,b,a>=b);
+        System.out.printf("%d <= %d --- %b\n",a,b,a<=b);
+
 
 
 
