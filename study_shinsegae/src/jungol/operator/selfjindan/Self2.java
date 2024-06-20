@@ -1,4 +1,4 @@
-package jungol.operator.self;
+package jungol.operator.selfjindan;
 
 import java.io.*;
 import java.util.*;
