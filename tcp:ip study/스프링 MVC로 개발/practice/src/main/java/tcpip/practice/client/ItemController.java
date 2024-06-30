@@ -1,5 +1,8 @@
 package tcpip.practice.client;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import jakarta.servlet.ServletInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,10 +15,11 @@ public class ItemController {
   private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
   public static void main(String[] args) throws IOException {
+
     while (true){
       itemService.printMenu();
-      int inputNum = Integer.parseInt(br.readLine());
-      switch (inputNum){
+      int menuNum = Integer.parseInt(br.readLine());
+      switch (menuNum){
         case 1:
           requestSave();
           continue;
@@ -31,6 +35,7 @@ public class ItemController {
           return;
       }
     }
+
   }
 
   private static void requestSave() throws IOException {
