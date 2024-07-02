@@ -1,4 +1,4 @@
-package _0701_inheritance_assignment.shape02;
+package _0701_inheritance_assignment.prob03;
 
 public abstract class Beverage {
     private String name;

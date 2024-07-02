@@ -1,4 +1,4 @@
-package _0701_inheritance_assignment.shape01;
+package _0701_inheritance_assignment.prob02;
 
 public class TestShape {
 

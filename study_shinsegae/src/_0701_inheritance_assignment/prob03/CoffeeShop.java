@@ -1,4 +1,4 @@
-package _0701_inheritance_assignment.shape02;
+package _0701_inheritance_assignment.prob03;
 
 import java.util.Arrays;
 
@@ -19,7 +19,7 @@ public class CoffeeShop {
   }
 
   private static int getTotalPrice(Beverage[] beverage) {
-      return Arrays.stream(beverage).mapToInt(a->a.price).sum();
+      return Arrays.stream(beverage).mapToInt(Beverage::getPrice).sum();
   }
 
   private static void getSalesInfo(Beverage[] beverage) {
