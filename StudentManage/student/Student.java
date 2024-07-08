@@ -5,8 +5,8 @@ public class Student {
   private int sno;
   private String name;
   private int[] record = new int[4];  //학생의 각 과목 점수 저장
-  private int total;
-  private double average;
+  private int total; //과목 총합
+  private double average; //과목 평균
   private String grade;
   private int rank = -1;
 
@@ -38,15 +38,15 @@ public class Student {
   }
 
 
-  private void makeScores() {
+  private void makeScores() { //총합 및 평균 계산
     for (int score : record) {
       this.total += score;
     }
     this.average = (double) this.total / record.length;
-            this.makeGarde();
+            this.makeGrade();
   }
 
-  private void makeGarde() {
+  private void makeGrade() { //각 점수에 따라 grade 값 초기화
     //enum GRADE 를 기준으로 학점 매기기
     int base = (int) average / 10;
     switch (base) {

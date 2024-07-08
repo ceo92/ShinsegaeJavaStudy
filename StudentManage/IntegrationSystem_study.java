@@ -42,18 +42,18 @@ public class IntegrationSystem_study {
             System.in.skip(System.in.available());
             switch (nSel) {
               case 1:
-                Instance.insertStudent();
+                Instance.insertStudent(); //학생 추가
                 continue;
               case 2:
-                Instance.getStudentList();
+                Instance.getStudentList(); //학생 전체 보기
                 continue;
               case 3:
-                Instance.searchStudent();
+                Instance.searchStudent(); // 학생 검색
                 continue;
               case 4:
-                Instance.sortedStudent();
+                Instance.sortedStudent(); // 학생 석차순으로 보기
                 continue;
-              case 5:
+              case 5: //이전으로
                 break;
               default:
                 continue;
@@ -61,7 +61,8 @@ public class IntegrationSystem_study {
             break;
           }
           continue;
-        case 3:
+        case 2:
+          System.out.println("시스템을 종료합니다..");
           break;
         default:
           continue;

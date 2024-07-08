@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.sql.DataSource;
 
 public abstract class ObjectDBIO {
 
   private Connection connection = null;
 
-  private String db_url = "jdbc:mysql://localhost:3306/employees";
+  private String db_url = "jdbc:mysql://localhost:3306/shinsegae";
   private String db_id = "root";
-  private String db_pwd = "1234";
+  private String db_pwd = "3469";
 
   //db_url, db_id , db_pwd Setter
 
@@ -32,7 +33,7 @@ public abstract class ObjectDBIO {
   private boolean open() {
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
-      connection = DriverManager.getConnection(db_url, db_id, db_pwd);
+      connection = DriverManager.getConnection(db_url, db_id, db_pwd); //jdbc => 각 DB드라이버들의 자바와의 연결 표준을 정의해놓은 것 ,
       return true;
     } catch (ClassNotFoundException e) {
       System.err.println(e.getMessage());

@@ -1,7 +1,12 @@
 package student;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
+//@Repository
 public class StudentManager extends StudentDBIO{
 
   //싱글톤으로 객체를 생성한다.
@@ -15,6 +20,35 @@ public class StudentManager extends StudentDBIO{
   }
 
   public boolean insertStudent(Student student) {//학생 정보 입력기능 (학생 객체 생성(vo) 후 학생 정보 저장)
+    String name = student.getName();
+    double average = student.getAverage();
+
+    String query = "";
+    Connection con = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+
+
+    try{
+      con.setAutoCommit(false);
+
+      pstmt = con.prepareStatement();
+      rs = pstmt.executeQuery(query);
+
+      con.commit();
+    }catch (SQLException e1){
+      try{
+        con.rollback();
+      }catch (SQLException e2){
+
+      }
+    }
+    finally {
+
+    }
+
+
+
     return false;
   }
 
