@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-//@Repository
 public class StudentManager extends StudentDBIO{
 
   //싱글톤으로 객체를 생성한다.
