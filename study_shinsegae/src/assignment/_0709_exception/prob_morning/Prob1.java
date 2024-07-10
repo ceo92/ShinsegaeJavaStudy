@@ -1,4 +1,4 @@
-package _0709_exception;
+package _0709_exception.prob_morning;
 
 import java.util.Scanner;
 //BufferedReader(new InputStreamReader(System.in)) 사용하셔도 됩니다.
