@@ -1,9 +1,6 @@
-package assignment.board_project.db.client;
+package assignment.board_project.tx;
 
 
-import assignment.board_project.db.server.BoardService;
-import assignment.board_project.db.domain.Board;
-import assignment.board_project.db.dto.BoardUpdateDto;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -30,8 +27,18 @@ public class BoardExample {
         //단 건 조회
         case 2:
           int readBno = inputBno(br);
+          Board board;
+          try {
+            board = findBoard(readBno);
+          }catch (IllegalStateException e) {
+            System.out.println("=======================ERROR=======================");
+            System.out.println(e.getMessage());
+            System.out.println("처음부터 다시 해주세요");
+            System.out.println("===================================================");
+            System.out.println();
+            break;
+          }
 
-          Board board = findBoard(readBno);
           int readSubMenuNum = Integer.parseInt(br.readLine());
 
           switch (readSubMenuNum) {
@@ -90,7 +97,7 @@ public class BoardExample {
     return readBno;
   }
 
-  private static void doRemoveAll(BufferedReader br) throws IOException {
+  private static void doRemoveAll(BufferedReader br) throws IOException, SQLException {
     System.out.println("[게시물 전체 삭제]");
     System.out.println("-".repeat(50));
     System.out.println("보조 메뉴: 1. Ok | 2. Cancel");
@@ -120,7 +127,7 @@ public class BoardExample {
     System.out.println();
   }
 
-  private static void doRemove(Board findBoard) {
+  private static void doRemove(Board findBoard) throws SQLException {
     boardService.removeBoard(findBoard.getBno());
   }
 

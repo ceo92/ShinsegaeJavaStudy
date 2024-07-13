@@ -1,7 +1,9 @@
 package assignment.board_project.db.server;
 
+import assignment.board_project.db.connection.DBConnectionUtil;
 import assignment.board_project.db.domain.Board;
 import assignment.board_project.db.dto.BoardUpdateDto;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -12,19 +14,19 @@ public class BoardService {
 
 
   public void printMenuAndBoards() throws SQLException {
-    System.out.println("[게시물 목록]");
-    System.out.println("-".repeat(50));
-    System.out.println("no\t\twriter\t\t\tdate\t\t\t\t\ttitle");
+      System.out.println("[게시물 목록]");
+      System.out.println("-".repeat(50));
+      System.out.println("no\t\twriter\t\t\tdate\t\t\t\t\ttitle");
 
-    System.out.println("-".repeat(50));
-    List<Board> list = boardRepository.findAll();
-    for (int i=list.size()-1 ; i>=0 ; i--){
-      System.out.println(list.get(i));
-    }
+      System.out.println("-".repeat(50));
+      List<Board> list = boardRepository.findAll();
+      for (int i = list.size() - 1; i >= 0; i--) {
+        System.out.println(list.get(i));
+      }
 
-    System.out.println("-".repeat(50));
-    System.out.println("메인 메뉴: 1.Create | 2.Read | 3. Clear | 4.Exit");
-    System.out.print("메뉴 선택: ");
+      System.out.println("-".repeat(50));
+      System.out.println("메인 메뉴: 1.Create | 2.Read | 3. Clear | 4.Exit");
+      System.out.print("메뉴 선택: ");
 
   }
 
@@ -50,4 +52,6 @@ public class BoardService {
   public void removeAllBoard()  {
     boardRepository.removeAll();
   }
+
+
 }
