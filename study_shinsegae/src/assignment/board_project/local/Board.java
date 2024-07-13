@@ -1,4 +1,4 @@
-package board_project;
+package board_project.local;
 
 import java.time.LocalDate;
 import lombok.Getter;

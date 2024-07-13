@@ -1,9 +1,10 @@
-package board_project;
+package board_project.db;
 
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class BoardExample {
@@ -11,7 +12,7 @@ public class BoardExample {
 
   private static final BoardService boardService = new BoardService();
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     while (true) {
@@ -67,7 +68,7 @@ public class BoardExample {
                 System.out.println("보조 메뉴: 1. Ok | 2. Cancel");
                 System.out.print("메뉴 선택: ");
                 if (Integer.parseInt(br.readLine()) == 1) {
-                  boardService.updateBoard(new BoardDto(findBoard.getBno(), updateTitle , updateContent , updateWriter));
+                  boardService.updateBoard(new BoardUpdateDto(findBoard.getBno(), updateTitle , updateContent , updateWriter));
                 }
 
                 break;
@@ -75,13 +76,12 @@ public class BoardExample {
                 boardService.removeBoard(findBoard.getBno());
                 break;
               case 3:
-                boardService.printMenu();
                 break;
             }
 
-          }catch (IllegalStateException e) {
+          }catch (Exception e) {
             System.out.println("*****Exception********");
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             System.out.println("***********************");
             break;
           }

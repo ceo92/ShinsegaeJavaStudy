@@ -1,10 +1,12 @@
-package board_project;
+package board_project.local;
 
 import java.util.List;
+
 
 public class BoardService {
 
   private static final BoardRepository boardRepository = new BoardRepository();
+
 
   public void printMenu(){
     System.out.println("[게시물 목록]");

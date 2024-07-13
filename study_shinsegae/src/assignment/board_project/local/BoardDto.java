@@ -1,4 +1,4 @@
-package board_project;
+package board_project.local;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package board_project;
+package board_project.local;
 
 import java.util.ArrayList;
 import java.util.HashMap;
