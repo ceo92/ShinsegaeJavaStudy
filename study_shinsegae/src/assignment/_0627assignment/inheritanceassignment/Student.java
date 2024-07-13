@@ -1,4 +1,4 @@
-package _0627assignment.inheritanceassignment;
+package assignment._0627assignment.inheritanceassignment;
 
 public class Student {
 

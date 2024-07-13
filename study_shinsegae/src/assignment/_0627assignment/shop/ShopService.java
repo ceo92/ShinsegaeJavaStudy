@@ -1,4 +1,4 @@
-package _0627assignment.shop;
+package assignment._0627assignment.shop;
 
 public class ShopService {
 

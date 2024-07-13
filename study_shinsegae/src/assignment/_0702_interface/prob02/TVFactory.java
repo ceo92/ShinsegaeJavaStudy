@@ -1,4 +1,4 @@
-package _0702_interface.prob02;
+package assignment._0702_interface.prob02;
 
 public class TVFactory extends Factory implements IWorkingTogether{
 

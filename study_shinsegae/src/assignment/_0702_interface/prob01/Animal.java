@@ -1,4 +1,4 @@
-package _0702_interface.prob01;
+package assignment._0702_interface.prob01;
 
 public abstract class Animal {
   int speed;
@@ -8,6 +8,13 @@ public abstract class Animal {
     this.speed = speed;
   }
 
+  public int getSpeed() {
+    return speed;
+  }
+
+  public void setSpeed(int speed) {
+    this.speed = speed;
+  }
 
   abstract void run(int hours);
 

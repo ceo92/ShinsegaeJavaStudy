@@ -1,4 +1,4 @@
-package _0627assignment.bank;
+package assignment._0627assignment.bank;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;

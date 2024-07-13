@@ -1,4 +1,4 @@
-package board_project.local;
+package assignment.board_project.local;
 
 import java.util.List;
 

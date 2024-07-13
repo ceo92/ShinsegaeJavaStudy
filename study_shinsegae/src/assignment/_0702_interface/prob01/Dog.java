@@ -1,4 +1,4 @@
-package _0702_interface.prob01;
+package assignment._0702_interface.prob01;
 
 public class Dog extends Animal{
 

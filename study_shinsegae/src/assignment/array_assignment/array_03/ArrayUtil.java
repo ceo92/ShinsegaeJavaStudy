@@ -1,4 +1,4 @@
-package array_assignment.array_03;
+package assignment.array_assignment.array_03;
 
 
 public class ArrayUtil {
@@ -16,15 +16,14 @@ public class ArrayUtil {
       newChar[i] = s[i];
 
     }
-
     for (int j = 0; j <= end-start ; j++) {
       newChar[start+j] = s[end-j];
     }
 
     return newChar;
 		//reverseString 메소드 구현
-
-
-		
 	}
 }
+
+
+

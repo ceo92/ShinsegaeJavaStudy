@@ -1,4 +1,4 @@
-package _0709_exception.prob0;
+package assignment._0709_exception.prob0;
 
 import java.util.Objects;
 import lombok.Getter;

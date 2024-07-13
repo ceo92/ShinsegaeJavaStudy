@@ -1,8 +1,8 @@
-package board_project.db;
+package assignment.board_project.db;
 
-import static board_project.db.ConnectionConst.PASSWORD;
-import static board_project.db.ConnectionConst.URL;
-import static board_project.db.ConnectionConst.USERNAME;
+import static assignment.board_project.db.ConnectionConst.PASSWORD;
+import static assignment.board_project.db.ConnectionConst.URL;
+import static assignment.board_project.db.ConnectionConst.USERNAME;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

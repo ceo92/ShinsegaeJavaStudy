@@ -1,4 +1,4 @@
-package _0627assignment.member;
+package assignment._0627assignment.member;
 
 public class MemberMain {
 

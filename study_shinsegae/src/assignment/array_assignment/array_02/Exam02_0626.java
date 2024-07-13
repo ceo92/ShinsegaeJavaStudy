@@ -1,4 +1,4 @@
-package array_assignment.array_02;
+package assignment.array_assignment.array_02;
 
 public class Exam02_0626 {
 

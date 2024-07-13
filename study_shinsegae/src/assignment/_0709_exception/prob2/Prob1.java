@@ -1,4 +1,4 @@
-package _0709_exception.prob2;
+package assignment._0709_exception.prob2;
 
 
 public class Prob1 {

@@ -1,4 +1,4 @@
-package _0702_interface.prob02;
+package assignment._0702_interface.prob02;
 
 public abstract class Factory {
     int openHour;

@@ -1,4 +1,4 @@
-package board_project.db;
+package assignment.board_project.db;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -9,7 +9,7 @@ public class BoardService {
   private static final BoardRepository boardRepository = new BoardRepository();
 
 
-  public void printMenu() throws SQLException {
+  public void printMenuAndBoards() throws SQLException {
     System.out.println("[게시물 목록]");
     System.out.println("-".repeat(50));
     System.out.println("no\t\twriter\t\t\tdate\t\t\t\t\ttitle");

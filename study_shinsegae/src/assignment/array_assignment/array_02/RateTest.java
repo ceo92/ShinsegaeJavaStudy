@@ -1,6 +1,6 @@
-package array_assignment.array_02;
+package assignment.array_assignment.array_02;
 
-import array_assignment.array_03.CalculateRates;
+import assignment.array_assignment.array_03.CalculateRates;
 import java.util.Arrays;
 
 public class RateTest {

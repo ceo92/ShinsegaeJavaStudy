@@ -1,4 +1,4 @@
-package _0709_exception.prob1;
+package assignment._0709_exception.prob1;
 
 import java.util.Arrays;
 import java.util.Scanner;

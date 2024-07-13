@@ -1,4 +1,4 @@
-package _0628assignment.account;
+package assignment._0628assignment.account;
 
 public class InsufficientException extends RuntimeException{
 

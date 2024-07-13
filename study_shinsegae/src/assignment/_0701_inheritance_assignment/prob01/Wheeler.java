@@ -1,4 +1,4 @@
-package _0701_inheritance_assignment.prob01;
+package assignment._0701_inheritance_assignment.prob01;
 
 public abstract class Wheeler {
 

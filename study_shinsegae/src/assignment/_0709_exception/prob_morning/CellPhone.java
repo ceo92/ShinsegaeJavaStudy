@@ -1,4 +1,4 @@
-package _0709_exception.prob_morning;
+package assignment._0709_exception.prob_morning;
 
 public class CellPhone {
   private String model; //핸드폰 모델 번호

@@ -1,4 +1,4 @@
-package _0709_exception.prob0;
+package assignment._0709_exception.prob0;
 
 public class VehicleTest {
   public static void main(String[] args) {

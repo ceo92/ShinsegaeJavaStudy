@@ -1,4 +1,4 @@
-package array_assignment.array_01;
+package assignment.array_assignment.array_01;
 
 import java.util.Arrays;
 

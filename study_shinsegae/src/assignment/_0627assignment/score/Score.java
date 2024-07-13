@@ -1,4 +1,4 @@
-package _0627assignment.score;
+package assignment._0627assignment.score;
 
 import java.util.Arrays;
 import java.util.Scanner;

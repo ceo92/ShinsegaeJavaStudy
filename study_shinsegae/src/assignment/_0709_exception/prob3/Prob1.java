@@ -1,4 +1,4 @@
-package _0709_exception.prob3;
+package assignment._0709_exception.prob3;
 
 public class Prob1 {
   public static void main(String[] args) {

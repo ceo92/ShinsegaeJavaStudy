@@ -1,4 +1,4 @@
-package _0701_inheritance_assignment.prob03;
+package assignment._0701_inheritance_assignment.prob03;
 
 public abstract class Content {
   private String title;

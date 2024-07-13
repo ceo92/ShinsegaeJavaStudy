@@ -1,4 +1,4 @@
-package classassignment;
+package assignment.classassignment;
 
 public class TestSchool {
 	
