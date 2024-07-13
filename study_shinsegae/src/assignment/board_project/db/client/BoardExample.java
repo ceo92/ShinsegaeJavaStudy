@@ -1,6 +1,9 @@
-package assignment.board_project.db;
+package assignment.board_project.db.client;
 
 
+import assignment.board_project.db.domain.Board;
+import assignment.board_project.db.dto.BoardUpdateDto;
+import assignment.board_project.db.server.BoardService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

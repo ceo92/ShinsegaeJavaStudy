@@ -1,5 +1,7 @@
-package assignment.board_project.db;
+package assignment.board_project.db.server;
 
+import assignment.board_project.db.domain.Board;
+import assignment.board_project.db.dto.BoardUpdateDto;
 import java.sql.SQLException;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package assignment.board_project.db;
+package assignment.board_project.db.dto;
 
 import lombok.Data;
 

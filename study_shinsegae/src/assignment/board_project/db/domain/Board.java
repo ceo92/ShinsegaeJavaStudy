@@ -1,4 +1,4 @@
-package assignment.board_project.db;
+package assignment.board_project.db.domain;
 
 import java.time.LocalDate;
 import lombok.Getter;
