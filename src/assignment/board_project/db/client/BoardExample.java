@@ -17,7 +17,7 @@ public class BoardExample {
 
   public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+    System.out.println("ddd");
     while (true) {
       //메뉴 판 및 Board 리스트 출력
       boardService.printMenuAndBoards();
