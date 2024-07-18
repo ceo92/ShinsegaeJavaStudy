@@ -5,5 +5,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <excluded>
+      <root url="jar://$PROJECT_DIR$/gson-2.8.7.jar!/" />
+    </excluded>
   </library>
 </component>
