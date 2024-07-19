@@ -5,23 +5,43 @@ import static assignment.board_project.tx.service.connection.ConnectionConst.PAS
 import static assignment.board_project.tx.service.connection.ConnectionConst.URL;
 import static assignment.board_project.tx.service.connection.ConnectionConst.USERNAME;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class DBConnectionUtil {
 
   public static Connection getConnection() {
-    try {
+    Properties properties = new Properties();
+
+    // application.properties 파일 경로를 지정합니다.
+    String propertiesFilePath = "src/application.properties";
+    Connection con = null;
+    try (InputStream input = new FileInputStream(propertiesFilePath)) {
+      // properties 파일을 로드합니다.
+      properties.load(input);
+
+      // properties 값을 가져옵니다.
+      String dbUrl = properties.getProperty("database.url");
+      String dbUsername = properties.getProperty("database.username");
+      String dbPassword = properties.getProperty("database.password");
+
       Class.forName("com.mysql.cj.jdbc.Driver");
-      return DriverManager.getConnection(URL, USERNAME, PASSWORD);
-    }catch (SQLException e){
+      con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (SQLException e) {
       throw new IllegalStateException(e.getMessage());
     } catch (ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
-
+    return con;
 
   }
+
 
 }
