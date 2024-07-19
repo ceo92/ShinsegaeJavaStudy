@@ -1,4 +1,4 @@
-package assignment.board_project.tx.server;
+package assignment.board_project.tx.service;
 
 import assignment.board_project.tx.domain.Board;
 import assignment.board_project.tx.dto.BoardUpdateDto;

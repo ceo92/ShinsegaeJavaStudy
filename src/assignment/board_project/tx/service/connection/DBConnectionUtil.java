@@ -1,8 +1,9 @@
-package assignment.board_project.tx.server.connection;
+package assignment.board_project.tx.service.connection;
 
-import static assignment.board_project.db.connection.ConnectionConst.PASSWORD;
-import static assignment.board_project.db.connection.ConnectionConst.URL;
-import static assignment.board_project.db.connection.ConnectionConst.USERNAME;
+
+import static assignment.board_project.tx.service.connection.ConnectionConst.PASSWORD;
+import static assignment.board_project.tx.service.connection.ConnectionConst.URL;
+import static assignment.board_project.tx.service.connection.ConnectionConst.USERNAME;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

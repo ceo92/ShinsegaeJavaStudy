@@ -1,7 +1,9 @@
-package assignment.board_project.tx.server;
+package assignment.board_project.tx.service;
 
 import assignment.board_project.tx.dto.BoardUpdateDto;
-import assignment.board_project.tx.server.connection.DBConnectionUtil;
+import assignment.board_project.tx.repository.BoardRepository;
+import assignment.board_project.tx.repository.BoardRepositoryImpl;
+import assignment.board_project.tx.service.connection.DBConnectionUtil;
 import assignment.board_project.tx.domain.Board;
 import java.sql.Connection;
 import java.sql.SQLException;

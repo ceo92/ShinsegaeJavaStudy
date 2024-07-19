@@ -1,8 +1,8 @@
 package assignment.board_project.tx.client;
 
 
-import assignment.board_project.tx.server.BoardService;
-import assignment.board_project.tx.server.BoardServiceImpl;
+import assignment.board_project.tx.service.BoardService;
+import assignment.board_project.tx.service.BoardServiceImpl;
 import assignment.board_project.tx.dto.BoardUpdateDto;
 import assignment.board_project.tx.domain.Board;
 import java.io.BufferedReader;
@@ -122,9 +122,10 @@ public class BoardExample {
       try {
         subMenuNum = Integer.parseInt(br.readLine());
       } catch (NumberFormatException e) {
-        System.out.println("숫자를 입력해주세요");
+        System.out.println("1과 2 중 하나를 입력해주세요");
         continue;
       }
+
       if (subMenuNum == 1) {
         boardService.removeAllBoard();
         break;
@@ -158,7 +159,7 @@ public class BoardExample {
       try {
         subMenuNum = Integer.parseInt(br.readLine());
       } catch (NumberFormatException e) {
-        System.out.println("숫자를 입력해주세요");
+        System.out.println("1과 2 중 하나를 입력해주세요");
         continue;
       }
       if (subMenuNum == 1) {
@@ -196,7 +197,7 @@ public class BoardExample {
       try {
         subMenuNum = Integer.parseInt(br.readLine());
       } catch (NumberFormatException e) {
-        System.out.println("숫자를 입력해주세요");
+        System.out.println("1과 2 중 하나를 입력해주세요");
         continue;
       }
       if (subMenuNum == 1) {
@@ -211,10 +212,6 @@ public class BoardExample {
         System.out.println("1과 2 중 하나를 입력해주세요");
       }
     }
-
-  }
-
-  private static void selectSubMenuNum(BufferedReader br , Board board) throws IOException, SQLException {
 
   }
 }
