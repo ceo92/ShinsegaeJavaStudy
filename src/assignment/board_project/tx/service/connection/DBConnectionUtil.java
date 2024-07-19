@@ -1,9 +1,6 @@
 package assignment.board_project.tx.service.connection;
 
 
-import static assignment.board_project.tx.service.connection.ConnectionConst.PASSWORD;
-import static assignment.board_project.tx.service.connection.ConnectionConst.URL;
-import static assignment.board_project.tx.service.connection.ConnectionConst.USERNAME;
 
 import java.io.FileInputStream;
 import java.io.IOException;
