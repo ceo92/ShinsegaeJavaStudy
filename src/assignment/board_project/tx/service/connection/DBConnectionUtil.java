@@ -27,14 +27,11 @@ public class DBConnectionUtil {
       String dbUsername = properties.getProperty("database.username");
       String dbPassword = properties.getProperty("database.password");
 
-      Class.forName("com.mysql.cj.jdbc.Driver");
       con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
     } catch (IOException e) {
       e.printStackTrace();
     } catch (SQLException e) {
       throw new IllegalStateException(e.getMessage());
-    } catch (ClassNotFoundException e) {
-      throw new RuntimeException(e);
     }
     return con;
 
