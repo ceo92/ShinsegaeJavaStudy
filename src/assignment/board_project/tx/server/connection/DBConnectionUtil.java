@@ -1,4 +1,4 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.server.connection;
 
 import static assignment.board_project.db.connection.ConnectionConst.PASSWORD;
 import static assignment.board_project.db.connection.ConnectionConst.URL;

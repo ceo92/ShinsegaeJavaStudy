@@ -1,7 +1,6 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.domain;
 
 import java.time.LocalDate;
-import java.util.Comparator;
 import lombok.Getter;
 import lombok.Setter;
 

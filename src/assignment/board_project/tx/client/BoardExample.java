@@ -1,10 +1,12 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.client;
 
 
+import assignment.board_project.tx.server.BoardService;
+import assignment.board_project.tx.dto.BoardUpdateDto;
+import assignment.board_project.tx.domain.Board;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.annotation.AnnotationTypeMismatchException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 

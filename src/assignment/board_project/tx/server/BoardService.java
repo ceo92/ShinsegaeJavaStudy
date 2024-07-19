@@ -1,8 +1,10 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.server;
 
+import assignment.board_project.tx.dto.BoardUpdateDto;
+import assignment.board_project.tx.server.connection.DBConnectionUtil;
+import assignment.board_project.tx.domain.Board;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Comparator;
 import java.util.List;
 
 

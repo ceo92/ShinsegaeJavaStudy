@@ -1,4 +1,4 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.server.connection;
 
 public interface ConnectionConst {
   String URL = "jdbc:mysql://localhost:3306/shinsegae";

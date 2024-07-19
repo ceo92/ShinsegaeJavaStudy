@@ -1,4 +1,4 @@
-package assignment.board_project.tx;
+package assignment.board_project.tx.dto;
 
 import lombok.Data;
 
