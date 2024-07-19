@@ -2,6 +2,7 @@ package assignment.board_project.tx.client;
 
 
 import assignment.board_project.tx.server.BoardService;
+import assignment.board_project.tx.server.BoardServiceImpl;
 import assignment.board_project.tx.dto.BoardUpdateDto;
 import assignment.board_project.tx.domain.Board;
 import java.io.BufferedReader;
@@ -13,9 +14,9 @@ import java.time.LocalDate;
 public class BoardExample {
 
 
-  private static final BoardService boardService = new BoardService();
+  private static final BoardService boardService = new BoardServiceImpl(); //DI
 
-  public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+  public static void main(String[] args) throws IOException, SQLException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     while (true) {
       //메뉴 판 및 Board 리스트 출력
