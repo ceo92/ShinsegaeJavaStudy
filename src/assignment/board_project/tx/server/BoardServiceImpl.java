@@ -56,7 +56,7 @@ public class BoardServiceImpl implements BoardService{
     Connection con = getConnection();
     con.setReadOnly(true);
     Board findBoard = boardRepository.findByBno(con, bno)
-        .orElseThrow(() -> new IllegalStateException("지정한 bno에 해당되는 Board 값은 존재하지 않습니다!"));
+        .orElseThrow(() -> new IllegalStateException("입력한 bno에 해당되는 Board 값은 존재하지 않습니다!"));
     con.setReadOnly(false);
     close(con);
     return findBoard; //예외는 어차피 리포지토리에서 던져줌

@@ -21,8 +21,13 @@ public class BoardExample {
     while (true) {
       //메뉴 판 및 Board 리스트 출력
       boardService.printMenuAndBoards();
-
-      int menuNum = Integer.parseInt(br.readLine());
+      int menuNum;
+      try {
+        menuNum = Integer.parseInt(br.readLine());
+      } catch (NumberFormatException e) {
+        System.out.println("숫자를 입력해주세요");
+        continue;
+      }
 
       System.out.println();
       switch (menuNum) {
@@ -32,21 +37,25 @@ public class BoardExample {
           break;
         //단 건 조회
         case 2:
-          int readBno = inputBno(br);
           Board board;
           try {
+            int readBno = inputBno(br);
             board = findBoard(readBno);
-          }catch (IllegalStateException e) {
-            System.out.println("=======================ERROR=======================");
+          } catch (IllegalStateException e) {
             System.out.println(e.getMessage());
-            System.out.println("처음부터 다시 해주세요");
-            System.out.println("===================================================");
-            System.out.println();
+            break;
+          } catch (NumberFormatException e) {
+            System.out.println("숫자를 입력해주세요");
             break;
           }
 
-          int readSubMenuNum = Integer.parseInt(br.readLine());
-
+          int readSubMenuNum = 0;
+          try {
+            readSubMenuNum = Integer.parseInt(br.readLine());
+          } catch (NumberFormatException e) {
+            System.out.println("숫자를 입력해주세요");
+          }
+          //메뉴 선택 , OK Cancel
           switch (readSubMenuNum) {
             //수정
             case 1:
@@ -108,13 +117,27 @@ public class BoardExample {
     System.out.println("-".repeat(50));
     System.out.println("보조 메뉴: 1. Ok | 2. Cancel");
     System.out.print("메뉴 선택: ");
-    if (Integer.parseInt(br.readLine()) == 1) {
-      boardService.removeAllBoard();
+    int subMenuNum = 0;
+    while (true) {
+      try {
+        subMenuNum = Integer.parseInt(br.readLine());
+      } catch (NumberFormatException e) {
+        System.out.println("숫자를 입력해주세요");
+        continue;
+      }
+      if (subMenuNum == 1) {
+        boardService.removeAllBoard();
+        break;
+      }
+      else if(subMenuNum == 2){
+        System.out.println("취소하였습니다.");
+        break;
+      }
+      else{
+        System.out.println("1과 2 중 하나를 입력해주세요");
+      }
     }
-    else {
-      System.out.println("취소하였습니다.");
-    }
-    
+
   }
 
   private static void doSave(BufferedReader br) throws IOException, SQLException {
@@ -130,13 +153,26 @@ public class BoardExample {
     System.out.println("-".repeat(50));
     System.out.println("보조 메뉴: 1. Ok | 2. Cancel");
     System.out.print("메뉴 선택: ");
-    if (Integer.parseInt(br.readLine()) == 1) {
-      boardService.saveBoard(board);
+    int subMenuNum = 0;
+    while (true) {
+      try {
+        subMenuNum = Integer.parseInt(br.readLine());
+      } catch (NumberFormatException e) {
+        System.out.println("숫자를 입력해주세요");
+        continue;
+      }
+      if (subMenuNum == 1) {
+        boardService.saveBoard(board);
+        break;
+      }
+      else if(subMenuNum == 2){
+        System.out.println("취소하였습니다.");
+        break;
+      }
+      else{
+        System.out.println("1과 2 중 하나를 입력해주세요");
+      }
     }
-    else {
-      System.out.println("취소하였습니다.");
-    }
-    System.out.println();
   }
 
   private static void doRemove(Board findBoard) throws SQLException {
@@ -155,13 +191,31 @@ public class BoardExample {
     System.out.println("-".repeat(50));
     System.out.println("보조 메뉴: 1. Ok | 2. Cancel");
     System.out.print("메뉴 선택: ");
-    if (Integer.parseInt(br.readLine()) == 1) {
-      boardService.updateBoard(new BoardUpdateDto(findBoard.getBno(), updateTitle , updateContent , updateWriter));
+    int subMenuNum = 0;
+    while (true) {
+      try {
+        subMenuNum = Integer.parseInt(br.readLine());
+      } catch (NumberFormatException e) {
+        System.out.println("숫자를 입력해주세요");
+        continue;
+      }
+      if (subMenuNum == 1) {
+        boardService.updateBoard(new BoardUpdateDto(findBoard.getBno() , updateTitle , updateContent , updateWriter));
+        break;
+      }
+      else if(subMenuNum == 2){
+        System.out.println("취소하였습니다.");
+        break;
+      }
+      else{
+        System.out.println("1과 2 중 하나를 입력해주세요");
+      }
     }
-    else {
-      System.out.println("취소하였습니다.");
-    }
+
   }
 
+  private static void selectSubMenuNum(BufferedReader br , Board board) throws IOException, SQLException {
+
+  }
 }
 
