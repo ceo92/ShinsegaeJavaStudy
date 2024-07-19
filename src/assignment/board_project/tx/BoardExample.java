@@ -4,6 +4,7 @@ package assignment.board_project.tx;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.annotation.AnnotationTypeMismatchException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -17,7 +18,9 @@ public class BoardExample {
     while (true) {
       //메뉴 판 및 Board 리스트 출력
       boardService.printMenuAndBoards();
+
       int menuNum = Integer.parseInt(br.readLine());
+
       System.out.println();
       switch (menuNum) {
         //저장
@@ -73,7 +76,7 @@ public class BoardExample {
     }
 
 
-    }
+  }
 
   private static Board findBoard(int readBno) throws SQLException {
     Board findBoard = boardService.findOne(readBno);
@@ -105,6 +108,9 @@ public class BoardExample {
     if (Integer.parseInt(br.readLine()) == 1) {
       boardService.removeAllBoard();
     }
+    else {
+      System.out.println("취소하였습니다.");
+    }
     
   }
 
@@ -123,6 +129,9 @@ public class BoardExample {
     System.out.print("메뉴 선택: ");
     if (Integer.parseInt(br.readLine()) == 1) {
       boardService.saveBoard(board);
+    }
+    else {
+      System.out.println("취소하였습니다.");
     }
     System.out.println();
   }
@@ -145,6 +154,9 @@ public class BoardExample {
     System.out.print("메뉴 선택: ");
     if (Integer.parseInt(br.readLine()) == 1) {
       boardService.updateBoard(new BoardUpdateDto(findBoard.getBno(), updateTitle , updateContent , updateWriter));
+    }
+    else {
+      System.out.println("취소하였습니다.");
     }
   }
 

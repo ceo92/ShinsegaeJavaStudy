@@ -2,6 +2,7 @@ package assignment.board_project.tx;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -20,9 +21,7 @@ public class BoardService {
 
     System.out.println("-".repeat(50));
     List<Board> list = boardRepository.findAll(con);
-    for (int i = list.size() - 1; i >= 0; i--) {
-      System.out.println(list.get(i));
-    }
+    list.stream().sorted().forEach(System.out::println);
 
     System.out.println("-".repeat(50));
     System.out.println("메인 메뉴: 1.Create | 2.Read | 3. Clear | 4.Exit");
@@ -120,7 +119,7 @@ public class BoardService {
   private static void close(Connection con){
     if (con != null) {
       try {
-        con.setAutoCommit(true);
+        con.setAutoCommit(true); //종료 시에는 자동 커밋 모드로 !
         con.close(); //Connection 닫기
       } catch (SQLException e) {
         System.out.println("error = " + e.getMessage());

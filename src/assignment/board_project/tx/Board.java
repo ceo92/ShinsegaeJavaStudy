@@ -1,11 +1,12 @@
 package assignment.board_project.tx;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class Board {
+public class Board implements Comparable<Board> {
 
   private int bno;
   private String btitle;
@@ -36,5 +37,10 @@ public class Board {
   @Override
   public String toString() {
     return bno + "\t\t" + bwriter + "\t\t\t" + bdate + "\t\t\t\t\t" + btitle;
+  }
+
+  @Override
+  public int compareTo(Board o) {
+    return o.getBno() - this.getBno();
   }
 }
